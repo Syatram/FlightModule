@@ -86,11 +86,6 @@ function FlightModule.CalculateSpeed() : number
 end
 
 function FlightModule.Disable(FM : FlightModuleType)
-	if FM.RenderSteppedConnection == nil then
-		error("Flight module already disabled")
-		return
-	end
-	
 	if FM.Humanoid then
 		FM.Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
 	end
