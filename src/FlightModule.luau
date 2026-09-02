@@ -158,4 +158,9 @@ function FlightModule.Toggle(self : FlightModuleType)
 	FlightModule.Enable(self)
 end
 
+function FlightModule.Destroy(self : FlightModuleType)
+	FlightModule.Disable(self)
+	self.CharacterAddedConnection:Disconnect()
+end
+
 return FlightModule
